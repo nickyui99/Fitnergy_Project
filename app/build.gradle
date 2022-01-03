@@ -44,9 +44,6 @@ dependencies {
     //for json
     implementation 'com.android.volley:volley:1.2.1'
 
-    //for json
-    implementation 'com.android.volley:volley:1.2.1'
-
     //circle view
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
