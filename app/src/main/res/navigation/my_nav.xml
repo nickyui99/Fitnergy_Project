@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/workoutFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.rtn.fitnergy.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/socialFragment"
+        android:name="com.rtn.fitnergy.social.SocialFragment"
+        android:label="fragment_social"
+        tools:layout="@layout/fragment_social" />
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.rtn.fitnergy.workout.WorkoutFragment"
+        android:label="fragment_workout"
+        tools:layout="@layout/fragment_workout" />
+    <fragment
+        android:id="@+id/eduFragment"
+        android:name="com.rtn.fitnergy.education.EduFragment"
+        android:label="fragment_edu"
+        tools:layout="@layout/fragment_edu" />
+    <fragment
+        android:id="@+id/mealFragment"
+        android:name="com.rtn.fitnergy.meal.MealFragment"
+        android:label="fragment_meal"
+        tools:layout="@layout/fragment_meal" />
+</navigation>

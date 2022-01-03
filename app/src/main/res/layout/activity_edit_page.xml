@@ -1,0 +1,52 @@
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp">
+        <LinearLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_editArticle_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is My Title"
+                />
+
+            <EditText
+
+                android:text="Lorem Ipsum"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_editArticle_desc"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:inputType="text|textMultiLine"
+                android:gravity="top"
+                />
+            <Button
+                android:id="@+id/btn_editArticle_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save edit"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

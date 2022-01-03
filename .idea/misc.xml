@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/drawable/ic_add.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.14322916666666666" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_add_article.xml" value="0.14266304347826086" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_article_page.xml" value="0.14266304347826086" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_edit_page.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_favourite.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_profile_setting.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_register.xml" value="0.24048913043478262" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_blank.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_edu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_history.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_meal.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_social.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_user_profile.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_user_weight.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/fragment_workout.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/my_fav_row.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/my_row.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/workout_record_list.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/menu/mymenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26614583333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

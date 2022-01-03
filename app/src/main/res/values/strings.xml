@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Fitnergy</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="main_settings">
+        <item>My Profile</item>
+        <item>Privacy</item>
+        <item>Privacy Policy</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="change_profile_img">
+        <item>Albums</item>
+        <item>Camera</item>
+    </string-array>
+</resources>
