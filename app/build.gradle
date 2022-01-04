@@ -50,4 +50,7 @@ dependencies {
     //Google Play Service
     implementation 'com.google.android.gms:play-services-auth:20.0.0'
     implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+
+    //youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 }

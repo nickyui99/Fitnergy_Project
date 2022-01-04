@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/drawable-ldpi/ic_baseline_thumb_up_24.xml" value="0.2703125" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/course_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/fragment_workout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/fragment_workout__congrat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Software_Temp/AndroidStudio/Fitnergy_Project/app/src/main/res/layout/fragment_workout__exe.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/drawable/ic_add.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.14322916666666666" />
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/layout/activity_add_article.xml" value="0.14266304347826086" />

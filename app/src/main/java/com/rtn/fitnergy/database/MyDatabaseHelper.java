@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -98,7 +99,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                         WEIGHT_COLUMN_CURRENTWEIGHT + " REAL, " +
                         "FOREIGN KEY (" + USER_COLUMN_USEREMAIL +  ") " +
                         "REFERENCES " + USER_TABLE_NAME + " (" + USER_COLUMN_USEREMAIL + ")); ";
-
+/*
         String workoutTable = "CREATE TABLE " + WORKOUT_TABLE_NAME + " (" +
                 WORKOUT_COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 WORKOUT_COLUMN_NAME + " TEXT NOT NULL, " +
@@ -115,7 +116,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "REFERENCES " + USER_TABLE_NAME + " (" + USER_COLUMN_USEREMAIL + ")," +
                 "FOREIGN KEY (" + WORKOUT_COLUMN_ID + ")" +
                 "REFERENCES " + WORKOUT_TABLE_NAME + " (" + WORKOUT_COLUMN_ID + "));";
-
+*/
 
 //        String articleTable = "CREATE TABLE " + TABLE_NAME +
 //                " (" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -149,13 +150,93 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "PRIMARY KEY(articleID, userID)" +
                 ");";
 
+        //workout
+        String workoutActivity = "CREATE TABLE WorkoutActivity ("+
+                "activityID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "activityName TEXT NOT NULL, " +
+                "activityInstruc TEXT NOT NULL, " +
+                "videoID TEXT NOT NULL "+
+                ");";
+
+        String workout = "CREATE TABLE Workout ("+
+                "workoutID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "workoutName TEXT NOT NULL, " +
+                "workoutDesc TEXT NOT NULL, " +
+                "workoutCalories INTEGER NOT NULL, " +
+                "workoutDuration REAL NOT NULL" +
+                ");";
+
+        String workoutDetail = "CREATE TABLE WorkoutDetail ("+
+                "workoutID INTEGER NOT NULL, " +
+                "activityID INTEGER NOT NULL, " +
+                "FOREIGN KEY(workoutID) REFERENCES workout(workoutID), " +
+                "FOREIGN KEY(activityID) REFERENCES workoutActivity(activityID), " +
+                "PRIMARY KEY(workoutID, activityID) " +
+                ");";
+
+        String workoutRecord = "CREATE TABLE WorkoutRecord ("+
+                "recordID INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "userEmail TEXT NOT NULL, " +
+                "workoutID INTEGER NOT NULL, " +
+                "workoutDate TEXT NOT NULL, " +
+                "FOREIGN KEY(userEmail) REFERENCES userTable(userEmail), " +
+                "FOREIGN KEY(workoutID) REFERENCES workout(workoutID) " +
+                ");";
+
+        String workoutCount = "CREATE TABLE WorkoutCount( "+
+                "workoutID INTEGER NOT NULL, " +
+                "userID INTEGER NOT NULL, " +
+                "workoutCount INTEGER, " +
+                "FOREIGN KEY(userID) REFERENCES userTable(userID), " +
+                "PRIMARY KEY(workoutID, userID)" +
+                ");";
+
+        String workout1 = "INSERT INTO Workout (workoutName, workoutDesc, workoutCalories, workoutDuration) " +
+                "VALUES ('Beginner', 'Suitable for beginner.', 1200, 45), " +
+                "('Medium', 'Suitable for usual exerciser.', 1600, 85), " +
+                "('Expert', 'Suitable for challenger.', 2500, 120);";
+
+        String workoutActivity1 = "INSERT INTO WorkoutActivity (activityName, activityInstruc, videoID) " +
+                "VALUES " +
+                "('V bracing - 25s', '1.Tighten the abdomen, put your hands on both slides of the lower leg, and raise the lower leg parallel to the ground. \n2. Adjust the position of the torso, not to the tail bone. \n3. Keep your back straight.', 'YtbKFCdlYog'), " +
+                "('Breaststroke Straighten Back - x20', '1. Lie prone on the mat, extend your arms forward and let your legs separate naturally. \n2. Tighten your hips and back, lift your limbs, bend your elbows and draw your arms back. \n3. Lift your knees and shoulders off the ground, pause slightly and return to the starting position.', '92t1DNOPnM0'), " +
+                "('Prone Back Stretch - x16', '1. Lie on the yoga mat with your hands on your ears. \n2. Lift up to the highest point, pause, and return to the beginning.', 'LLslBxDaZQ0'), " +
+                "('Cross Mountain Climber - x16', '1. The arm is naturally straight and perpendicular to the ground. \n2. Keep knees and toes in the same direction. \n3. Keep your belly tight.', 'luRruRjECm8'), " +
+                "('Touch Knee Crunch - x20', '1. Lie on the mat, bend your knees, slightly separate your legs, and firmly step on your feet. \n2. Hold your hands on your thighs, roll your shoulders and upper back off the ground with the strength of your abs, and slowly return to the starting position after touching your knees with your hands. \n3. When touching the knee, keep the lower back close to the ground and keep the arms straight.', 'hG_6ZcTXx54'), " +
+                "('Dynamic Plank - x12', '1. Support your body fully. \n2. Lower one arm. \n3. Tighten the waist and abdomen to reduce shaking. \n4. Restore after plank.', 'mLOesPMO_OA'), " +
+                "('Push-Ups - x16', '1. Straight back. \n2. Lean to the elbow joint slightly above the torso.', 'BRlikA4oxOw'), " +
+                "('Left Bulgarian Squat - x16', '1. Stand on one foot on the left, with your right foot resting on the edge of the chair and your hands on your hips and relaxed as possible. \n2. Squat with your left leg bent so that your thigh is parallel to the floor and your knee does not exceed your toe. \n3. Keep your back straight and stand with your heels up. \n4. Hold on to a table or another fixture if you cannot stand still.', 'X51xIXY09_Y'), " +
+                "('Right Bullgarian Squat - x14', '1. Stand on one leg on the right, put the left foot on the edge of the chair, and relax as much as possible with your hands akimbo. \n2. Squat with your right leg bent to make the thigh parallel to the ground, with the knee no more than the toe. \n3. Back straight, heel up. \n4. If you canot stand stably, you can hold the table or other fixings.', '3ezmfUFMQ8o')," +
+                "('Supine Leg Raises - x8', '1. Lie on your back on the mat, press your lower back firmly to the ground, straighten your legs, and hook up your toes. \n2. The legs are raised and lowered.', 'q0JVBRHoLz4'), " +
+                "('Slow Split Lunge - x20', '1. Lift your head and straighten your chest, straight back. \n2. Keep the moement speed steady and keep your knees below your toes. \n3. Sit down vertically and try not to touch the knees on the hind legs.', 'GMaDnJ5CXoM'), " +
+                "('Mummy Jump - x32', '1. Stomach in, chest out, back straight. \n2. Cross the arms and legs at the same time. \n3. The knees slightly bend for buffering when landing. \n4. Keep balance.', 'QtyHmqMZ5gw'), " +
+                "('Alternating Leg Raising Plank - x18', '1. Lie prone on the mat, put elbows on the ground, keep the head, shoulder, back, hip, knee and ankle in a straight line. \n2. Lift he legs up to the highest point alternately. \n3. When lifting the legs, keep the legs and upper body still. \n4. The legs are fully extended during the action.', 's1MeMvqSNqA'), " +
+                "('Static Hip Bridge - 25s', '1. Lie on your back on a yoga mat with your legs bent and your heels on the floor. \n2. Apply force to lift your hips up to your thighs in line with your body. \n3. Lift your hips up with your upper back supporting the floor and holding.', 'AacXE6_hGBI'), " +
+                "('Jumping Jack With Toe Touch - x30', '1. Stomach in, chest out, back straight. \n2. The knees slightly bend for buffering when landing. \n3. Keep balance.', 'L7urjuNTIos' ), " +
+                "('Squat Jump - x14', '1. Keep your back straight, tighten your waist and abdomen, and stretch your arms forward when you squat, parallel to the ground, and straighten your fingers. \n2. Use the muscles of the thighs and buttocks to elastically jump when squatting to the bottom.', 'YGGq0AE5Uyc' ), " +
+                "('Step burpee - x8', '1. Keep hands shoulder-width apart. \n2. Step backward with alternating legs. \n3. Tighten the core of your waist and abdomen. \n4. Do not cave in.', '4bkOIruGAho'), " +
+                "('Butt Kicks - 30s', '1. Back straight, look ahead, put hands on hips. \n2. Keep your body stable, quickly lift your alternate legs up and touch your hands every time.', '-dtvAxibgYQ'), " +
+                "('Back Stretch - x12', '1. Lie on the yoga mat with your hands on the ground. \n2. Lift up to the highest point, pause and return to the beginning.', 'LLslBxDaZQ0');";
+        String workoutDetail1 = "INSERT INTO WorkoutDetail (workoutID, activityID)" +
+                "VALUES (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), " +
+                "(2, 1), (2, 3), (2, 4), (2, 7), (2, 8), (2, 9), (2, 12), (2, 13), (2, 14), (2, 15), (2, 16), (2, 2), (2, 5), (2, 10), (2, 11), " +
+                "(3, 3), (3, 6), (3, 8), (3, 1), (3, 5), (3, 2), (3, 12), (3, 17), (3, 13), (3, 16), (3, 15), (3, 18), (3, 10), (3, 14), (3, 19) , (3, 4), (3, 11), (3, 7)";
+
         db.execSQL(userTable);
         db.execSQL(weightTable);
-        db.execSQL(workoutTable);
-        db.execSQL(workoutRecordTable);
+        /*db.execSQL(workoutTable);
+        db.execSQL(workoutRecordTable);*/
         db.execSQL(articleTable);
         db.execSQL(articleStoreTable);
         db.execSQL(favouriteTable);
+        db.execSQL(workoutActivity);
+        db.execSQL(workout);
+        db.execSQL(workoutDetail);
+        db.execSQL(workoutRecord);
+        db.execSQL(workoutCount);
+        db.execSQL(workout1);
+        db.execSQL(workoutActivity1);
+        db.execSQL(workoutDetail1);
     }
 
     @Override
@@ -206,6 +287,11 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         }
 
         long insert = db.insert(USER_TABLE_NAME, null, cv);
+        Cursor data = db.rawQuery("SELECT userID FROM User WHERE userName = '" + userModel.getUserName() + "';", null);
+        data.moveToNext();
+        String workoutCount1 = "INSERT INTO WorkoutCount (userID, workoutID, workoutCount)" +
+                "VALUES (" + data.getInt(0) + ", 1, 0), (" + data.getInt(0) + ", 2, 0), (" + data.getInt(0) + ", 3, 0);";
+        db.execSQL(workoutCount1);
         return insert != 1;
     }
 
@@ -607,6 +693,111 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             Toast.makeText(context, "Delete successful!", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(context, "Delete failed!", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    //workout
+    public Cursor getWorkout(){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor data = db.rawQuery("SELECT workoutName, workoutDesc FROM Workout" +
+                " ORDER BY workoutID;", null);
+        data.moveToFirst();
+
+        return data;
+    }
+
+    public Cursor getWorkoutID(String name){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor data = db.rawQuery("SELECT workoutID FROM Workout WHERE workoutName = '" + name + "';", null);
+        data.moveToFirst();
+
+        return data;
+    }
+
+    public Cursor getWorkoutDet(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor data = db.rawQuery("SELECT WorkoutActivity.activityName, WorkoutActivity.activityInstruc, WorkoutActivity.videoID " +
+                "FROM WorkoutActivity INNER JOIN WorkoutDetail ON WorkoutActivity.activityID = WorkoutDetail.activityID " +
+                "INNER JOIN Workout ON WorkoutDetail.workoutID = Workout.workoutID " +
+                "WHERE Workout.workoutID =" + id + ";", null);
+        data.moveToFirst();
+        return data;
+    }
+
+    public Cursor getLastWRec(String email){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor data = db.rawQuery("SELECT Workout.workoutID, workoutName, workoutDesc FROM WorkoutRecord" +
+                " INNER JOIN Workout ON WorkoutRecord.workoutID = Workout.workoutID WHERE userEmail = '" + email + "' ORDER BY recordID DESC LIMIT 1;", null);
+
+        if(data.getCount() == 1){
+            return data;
+        } else {
+            return null;
+        }
+    }
+
+    public int getWorkoutCount(int id){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor data = db.rawQuery("SELECT workoutCount FROM WorkoutCount WHERE userID ="+ id +";", null);
+        data.moveToNext();
+
+        int ttlCount = 0;
+        int i = 0;
+        while(i < data.getCount()){
+            ttlCount += data.getInt(0);
+            data.moveToNext();
+            i++;
+        }
+
+        return ttlCount;
+    }
+
+    //nid to update
+    public void addWorkoutRecord(String email, int workoutID, String workoutDate, int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        Log.d("Click", workoutDate);
+
+        cv.put("userEmail", email);
+        cv.put("workoutID", workoutID);
+        cv.put("workoutDate", workoutDate);
+
+        long result = db.insert("WorkoutRecord", null, cv);
+
+        String query = "UPDATE WorkoutCount SET workoutCount = workoutCount + 1 WHERE userID = " + id +" AND workoutID = "+ workoutID + ";";
+        db.execSQL(query);
+
+      /*  Cursor data = db.rawQuery("SELECT workoutCalories FROM Workout WHERE workoutID = " + workoutID + ";", null);
+        data.moveToNext();
+
+
+        //query = "UPDATE User SET calorieAccumulated = calorieAccumulated + data.getInt(0) WHERE workoutID = "+ workoutID + ";";
+        //long result2 = db.update("Workout", cv, "workoutID = ?", new String[]{Integer.toString(workoutID)});
+        if (result != -1) {
+            Log.d("Click", "Success" + data.getInt(0));
+        } else {
+            Log.d("Click", "Failed");
+        }*/
+    }
+
+    public void resetRecord(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String query = "DELETE FROM WorkoutRecord";
+        db.execSQL(query);
+
+        query = "DELETE FROM sqlite_sequence WHERE name = 'WorkoutRecord';";
+        db.execSQL(query);
+
+        Cursor data = getWorkout();
+        for(int i = 1; i < data.getCount()+1; i++){
+            query = "UPDATE WorkoutCount SET workoutCount = 0 WHERE userID =" + id +" AND workoutID = "+ i + ";";
+            db.execSQL(query);
         }
     }
 
