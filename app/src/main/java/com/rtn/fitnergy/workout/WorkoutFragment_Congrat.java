@@ -1,16 +1,22 @@
 package com.rtn.fitnergy.workout;
 
-import android.content.SharedPreferences;
 import static android.content.Context.MODE_PRIVATE;
 
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.TextView;
+import android.widget.VideoView;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.rtn.fitnergy.R;
@@ -31,9 +37,16 @@ public class WorkoutFragment_Congrat extends Fragment {
     SharedPreferences sharedPreferences;
     UserModel userData;
     String spEmail, spPassword;
+    ConstraintLayout congrat, victory;
+    VideoView victoryVid;
+    MediaController mediaController;
     public static final String SHARED_PREFS = "user_session";
     public static final String EMAIL_KEY = "email_key";
     public static final String PASSWORD_KEY = "password_key";
+
+    private Accelerometer accelerometer;
+    private Gyroscope gyroscope;
+    public static int accFlag, gyroFlag;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -86,6 +99,13 @@ public class WorkoutFragment_Congrat extends Fragment {
         textCount = (TextView) view.findViewById(R.id.countText);
         icon = (ImageView) view.findViewById(R.id.niceIcon);
         doneBtn = (Button) view.findViewById(R.id.doneBtn);
+        congrat = (ConstraintLayout) view.findViewById(R.id.congratz);
+        victory = (ConstraintLayout) view.findViewById(R.id.victory);
+        victoryVid = (VideoView) view.findViewById(R.id.victoryVid);
+        accelerometer = new Accelerometer(getActivity().getApplicationContext());
+        gyroscope = new Gyroscope(getActivity().getApplicationContext());
+        accFlag = 0;
+        gyroFlag = 0;
 
         MyDatabaseHelper db = new MyDatabaseHelper(view.getContext());
 
@@ -97,11 +117,6 @@ public class WorkoutFragment_Congrat extends Fragment {
 
         int cnt = db.getWorkoutCount(userData.getUserID());
 
-        if(cnt%10 == 0){
-            textCount.setText("You have worked with our workout plan for "+ cnt + " times. \nKeep it up!");
-            textCount.setVisibility(view.VISIBLE);
-        }
-
         doneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,6 +125,74 @@ public class WorkoutFragment_Congrat extends Fragment {
             }
         });
 
+        accelerometer.setListener(new Accelerometer.Listener() {
+            @Override
+            public void onTransition(float tx, float ty, float tz) {
+                Log.d("Acc", "Acc: " + tx + " " + ty + " " + tz);
+                if(tz > 20.0f){
+                    accFlag = 1;
+                    isVictory(view, cnt);
+                }
+            }
+        });
+
+        gyroscope.setListener(new Gyroscope.Listener() {
+            @Override
+            public void onRotation(float rx, float ry, float rz) {
+                Log.d("Gyro", "Gyro: " + rx + " " + ry + " " + rz);
+                if(rx < 1.0f && rx > -1.0f){
+                    if(ry < 1.0f && ry > -1.0f){
+                        gyroFlag = 1;
+                        isVictory(view, cnt);
+                    }
+                }
+            }
+        });
+
+        Uri uri = Uri.parse("android.resource://" + getActivity().getPackageName() + "/" + R.raw.victory);
+        victoryVid.setMediaController(mediaController);
+        victoryVid.setVideoURI(uri);
+        victoryVid.requestFocus();
+        victoryVid.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
+
+
+        victoryVid.start();
+
         return view;
+    }
+    
+    public void isVictory(View view, int cnt){
+        Log.d("Flag", "Flag: " + accFlag + " " + gyroFlag);
+        if(accFlag == 1 && gyroFlag == 1){
+            congrat.setVisibility(view.VISIBLE);
+            victory.setVisibility(view.INVISIBLE);
+
+            if(cnt%10 == 0){
+                textCount.setText("You have worked with our workout plan for "+ cnt + " times. \nKeep it up!");
+                textCount.setVisibility(view.VISIBLE);
+            }
+            accFlag = 0;
+            gyroFlag = 0;
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        accelerometer.register();
+        gyroscope.register();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        accelerometer.unregister();
+        gyroscope.unregister();
     }
 }
