@@ -19,21 +19,27 @@
             android:layout_height="5dp"
             android:layout_alignParentStart="false"
             android:layout_centerHorizontal="true"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/workProNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/workProgress"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginTop="3dp"
             android:text="123"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workProgress" />
+            app:layout_constraintHorizontal_bias="0.958"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workProgress"
+            app:layout_constraintVertical_bias="0.005" />
 
         <Button
             android:id="@+id/btn_Next"
@@ -44,19 +50,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            app:layout_constraintVertical_bias="0.381" />
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            app:layout_constraintVertical_bias="0.842" />
 
         <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
             android:id="@+id/youtube_player_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            app:autoPlay="false"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/workProgress"
+            app:layout_constraintTop_toBottomOf="@+id/workProNum"
+            app:layout_constraintVertical_bias="0.0"
             app:showFullScreenButton="false"
             app:showYouTubeButton="false" />
 
@@ -64,27 +71,29 @@
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view">
+            app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/tV_workTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="3dp"
                 android:text="Work Title"
-                android:textSize="18dp" />
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tV_workInst"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Work Instruction"
-                android:textSize="15dp" />
+                android:textSize="13dp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

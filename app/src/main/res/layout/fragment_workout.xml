@@ -55,9 +55,10 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_weight="2">
 
                     <TextView
                         android:id="@+id/recentWork_name"
@@ -75,17 +76,18 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5">
 
                     <Button
                         android:id="@+id/btn_Start"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Start" />
+                        android:text="Start"
+                        android:layout_marginRight="10dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
