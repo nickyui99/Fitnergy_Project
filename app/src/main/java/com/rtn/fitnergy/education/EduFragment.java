@@ -46,8 +46,8 @@ public class EduFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_edu, container, false);
 
         Button favButton= view.findViewById(R.id.btn_eduFrag_fav);
-        TextView addButton=view.findViewById(R.id.btn_eduFrag_add);
-        TextView refreshButton= view.findViewById(R.id.btn_eduFrag_refresh);
+        Button addButton=view.findViewById(R.id.btn_eduFrag_add);
+
 
         favButton.setOnClickListener(new View.OnClickListener() {
             @Override

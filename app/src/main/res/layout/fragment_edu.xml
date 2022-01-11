@@ -16,15 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <!--            <com.google.android.material.textfield.TextInputEditText-->
-            <!--                android:id="@+id/et_searchBar"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_weight="1"-->
-            <!--               android:layout_marginTop="8dp"-->
-            <!--                android:padding="8dp"-->
-            <!--                android:layout_marginRight="10dp"-->
-            <!--                />-->
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -32,27 +24,24 @@
                 android:padding="8dp"
                 android:textSize="24sp"
                 android:layout_weight="1"></TextView>
-            <TextView
-                android:id="@+id/btn_eduFrag_refresh"
-                android:layout_width="wrap_content"
-                android:padding="8dp"
-                android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_refresh"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="4dp"/>
-            <TextView
+
+            <Button
                 android:padding="8dp"
                 android:id="@+id/btn_eduFrag_add"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="10dp"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_add"
+                android:text="➕"
+                android:backgroundTint="@color/purple_200"
                 android:layout_marginRight="4dp"
                 android:layout_gravity="center"
-
                 android:layout_marginHorizontal="2dp"/>
             <Button
                 android:id="@+id/btn_eduFrag_fav"
-                android:layout_width="45dp"
+                android:layout_width="50dp"
+                android:backgroundTint="@color/purple_200"
                 android:layout_height="wrap_content"
                 android:text="❤"
                 android:layout_gravity="end"/>
