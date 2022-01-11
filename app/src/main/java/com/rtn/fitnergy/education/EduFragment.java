@@ -1,7 +1,10 @@
 package com.rtn.fitnergy.education;
 
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +23,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.rtn.fitnergy.R;
+import com.rtn.fitnergy.database.MyDatabaseHelper;
+import com.rtn.fitnergy.profile.model.UserModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -28,11 +33,17 @@ import org.json.JSONObject;
 
 public class EduFragment extends Fragment {
 
-//    ArrayList<Article> articleData = new ArrayList<>();
-
+    SharedPreferences sharedPreferences;
+    UserModel userData;
+    String spEmail, spPassword;
+    public static final String SHARED_PREFS = "user_session";
+    public static final String EMAIL_KEY = "email_key";
+    public static final String PASSWORD_KEY = "password_key";
     Article article1 = new Article();
     Article article2 = new Article();
     Article article3 = new Article();
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,10 +55,11 @@ public class EduFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_edu, container, false);
-
+        MyDatabaseHelper db = new MyDatabaseHelper(view.getContext());
         Button favButton= view.findViewById(R.id.btn_eduFrag_fav);
         Button addButton=view.findViewById(R.id.btn_eduFrag_add);
 
+        //getUserEmail(db);
 
         favButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +90,16 @@ public class EduFragment extends Fragment {
         //TODO: Load JSON Data into articleStore, from articleStore put into array, array goes into adapter view
         //keyword here is the category
         return view;
+    }
+    
+    public void getUserEmail(MyDatabaseHelper db){
+        sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        spEmail = sharedPreferences.getString(EMAIL_KEY, null);
+        spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
+
+        userData = db.getUserData(spEmail, spPassword);
+        String userEmail = userData.getUserEmail();
+        Log.d("HAHAHA","getUserEmail: "+userEmail);
     }
 
     public void volleyTest(View view,Article newArticle,String keyword,boolean completeArray) {

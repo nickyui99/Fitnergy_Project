@@ -129,8 +129,10 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "articleTitle TEXT NOT NULL, " +
                 "articleDesc TEXT NOT NULL, " +
                 "articlePicture TEXT NOT NULL, " +
-                "articleLink TEXT NOT NULL"+
+                "articleLink TEXT NOT NULL, "+
+                "articleEmail TEXT NOT NULL"+
                 ");";
+
         String articleStoreTable = "CREATE TABLE ArticleStore (" +
                 "articleStID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "articleStTitle TEXT NOT NULL, " +
@@ -613,14 +615,16 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     //TODO: This part is created by Ronald
 
-    public void addArticle(String title, String desc,String imgLink, String link) {
+    public void addArticle(String title, String desc,String imgLink, String link,String email) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
+
 
         cv.put("articleTitle", title);
         cv.put("articleDesc", desc);
         cv.put("articlePicture", imgLink);
         cv.put("articleLink", link);
+        cv.put("articleEmail", email);
 
         long result = db.insert("Article", null, cv);
 
@@ -632,9 +636,9 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    public Cursor readFavData(){
+    public Cursor readFavData(String articleEmail){
 
-        String query= "SELECT * FROM Article";
+        String query= "SELECT * FROM Article WHERE articleEmail='"+articleEmail+"'";
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor=null;
         if(db!=null){
