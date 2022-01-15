@@ -21,12 +21,12 @@
                 android:id="@+id/et_addArticle_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="This is My Title"
+                android:hint="Write your title here!"
                 />
 
             <EditText
 
-                android:text="Lorem Ipsum"
+                android:hint="Write your content here."
                 android:layout_marginTop="20dp"
                 android:id="@+id/et_addArticle_desc"
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:id="@+id/btn_addArticle_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add to Favourites"
+                android:text="Save Article to Favourites"
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>

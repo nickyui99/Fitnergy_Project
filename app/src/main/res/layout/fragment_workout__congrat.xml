@@ -17,8 +17,10 @@
             android:id="@+id/victoryIns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wrap Up"
-            android:textSize="25dp"
+            android:text="Exercise Completed!"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
@@ -59,7 +61,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/vidRL"
-            app:layout_constraintVertical_bias="0.132">
+            app:layout_constraintVertical_bias="0.272">
 
             <TextView
                 android:layout_width="match_parent"
