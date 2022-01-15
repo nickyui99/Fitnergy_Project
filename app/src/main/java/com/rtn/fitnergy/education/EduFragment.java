@@ -95,16 +95,6 @@ public class EduFragment extends Fragment {
         });
     }
 
-    public void getUserEmail(MyDatabaseHelper db) {
-        sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        spEmail = sharedPreferences.getString(EMAIL_KEY, null);
-        spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
-
-        userData = db.getUserData(spEmail, spPassword);
-        String userEmail = userData.getUserEmail();
-        Log.d("HAHAHA", "getUserEmail: " + userEmail);
-    }
-
     public void volleyTest(View view, Article newArticle, String keyword, boolean completeArray) {
         //String url="https://newsdata.io/api/1/news?apikey=pub_2628cb71c0228d9f2bb09214caae1b7eab7e&q=natural%20disasters";
         String url = "https://gnews.io/api/v4/search?q=" + keyword + "&token=48acd5fa39eb227e179f544e427744c9&lang=en";

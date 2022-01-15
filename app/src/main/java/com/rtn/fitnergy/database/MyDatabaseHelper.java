@@ -130,7 +130,8 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "articleDesc TEXT NOT NULL, " +
                 "articlePicture TEXT NOT NULL, " +
                 "articleLink TEXT NOT NULL, "+
-                "articleEmail TEXT NOT NULL"+
+                "articleEmail TEXT NOT NULL, "+
+                "FOREIGN KEY(articleEmail) REFERENCES userTable(userEmail)" +
                 ");";
 
         String articleStoreTable = "CREATE TABLE ArticleStore (" +
@@ -142,15 +143,15 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
                 "articleStCategory TEXT NOT NULL"+
                 ");";
 
-        String favouriteTable = "CREATE TABLE Favourite ("+
-                "articleID INTEGER NOT NULL, " +
-                "userID INTEGER NOT NULL, " +
-                "FOREIGN KEY (articleID) " +
-                "REFERENCES Article (articleID), " +
-                "FOREIGN KEY (userID) " +
-                "REFERENCES User (userID), " +
-                "PRIMARY KEY(articleID, userID)" +
-                ");";
+//        String favouriteTable = "CREATE TABLE Favourite ("+
+//                "articleID INTEGER NOT NULL, " +
+//                "userID INTEGER NOT NULL, " +
+//                "FOREIGN KEY (articleID) " +
+//                "REFERENCES Article (articleID), " +
+//                "FOREIGN KEY (userID) " +
+//                "REFERENCES User (userID), " +
+//                "PRIMARY KEY(articleID, userID)" +
+//                ");";
 
         //workout
         String workoutActivity = "CREATE TABLE WorkoutActivity ("+
@@ -251,7 +252,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(workoutRecordTable);*/
         db.execSQL(articleTable);
         db.execSQL(articleStoreTable);
-        db.execSQL(favouriteTable);
+        //db.execSQL(favouriteTable);
         db.execSQL(workoutActivity);
         db.execSQL(workout);
         db.execSQL(workoutDetail);
