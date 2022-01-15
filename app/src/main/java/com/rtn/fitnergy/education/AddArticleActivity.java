@@ -35,7 +35,7 @@ public class AddArticleActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MyDatabaseHelper myDB = new MyDatabaseHelper(view.getContext());
-                myDB.addArticle(addArticleTitle.getText().toString(), addArticleDesc.getText().toString(), "none", "none",getUserEmail(myDB));
+                myDB.addArticle(addArticleTitle.getText().toString(), addArticleDesc.getText().toString(), "https://sm.pcmag.com/t/pcmag_ap/news/t/the-best-f/the-best-fitness-apps-for-2020_ycf7.1200.jpg", "none",getUserEmail(myDB));
             }
         });
 

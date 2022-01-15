@@ -50,7 +50,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Healthy Eating"
+            android:text="Arm Exercises"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -64,7 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exercise and Sports"
+            android:text="Cardio Exercises"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -78,7 +78,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fitness"
+            android:text="Strength Exercises"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -92,7 +92,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Trending Articles"
+            android:text="Online Trending Articles"
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
@@ -103,7 +103,6 @@
             android:id="@+id/recyclerView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             />
 
 
