@@ -23,6 +23,7 @@ public class PrivacySettingActivity extends AppCompatActivity {
 
     private Switch switchProfileVisibility, switchSocialCircle, switchPrivateMode;
 
+    //test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
