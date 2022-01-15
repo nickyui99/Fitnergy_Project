@@ -52,13 +52,13 @@ public class WeightFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        initSharedPref();
         initDatabase();
         initViews();
         setViews();
     }
 
-
-    public void initDatabase(){
+    public void initSharedPref(){
         // getting the data which is stored in shared preferences.
         sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         // in shared prefs inside het string method
@@ -68,6 +68,10 @@ public class WeightFragment extends Fragment{
         spEmail = sharedPreferences.getString(EMAIL_KEY, null);
         spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
         myDatabaseHelper = new MyDatabaseHelper(getContext());
+    }
+
+
+    public void initDatabase(){
         weightModel = myDatabaseHelper.getWeight(spEmail);
         userModel = myDatabaseHelper.getUserData(spEmail, spPassword);
     }

@@ -69,12 +69,13 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_setting);
 
+        initSharedPref();
         initDatabase();
         initView();
         setView();
     }
 
-    public void initDatabase(){
+    public void initSharedPref(){
         // getting the data which is stored in shared preferences.
         sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         // in shared prefs inside het string method
@@ -83,6 +84,10 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
         // set to null if not present.
         spEmail = sharedPreferences.getString(EMAIL_KEY, null);
         spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
+    }
+
+    public void initDatabase(){
+
         myDatabaseHelper = new MyDatabaseHelper(this);
     }
 
