@@ -44,13 +44,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        initSharedPref();
         initDatabase();
         initView();
         setGoogle();
 
     }
 
-    public void initDatabase(){
+    public void initSharedPref(){
         // getting the data which is stored in shared preferences.
         sharedpreferences = getSharedPreferences(SHARED_PREFS, this.MODE_PRIVATE);
 
@@ -60,6 +61,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // set to null if not present.
         spEmail = sharedpreferences.getString(EMAIL_KEY, null);
         spPassword = sharedpreferences.getString(PASSWORD_KEY, null);
+    }
+
+    public void initDatabase(){
         myDatabaseHelper = new MyDatabaseHelper(this);
     }
 

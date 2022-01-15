@@ -53,12 +53,13 @@ public class UserProfileFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        initSharedPref();
         initDatabase();
         initViews();
         setViews();
     }
 
-    public void initDatabase(){
+    public void initSharedPref(){
         // getting the data which is stored in shared preferences.
         sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         // in shared prefs inside het string method
@@ -67,7 +68,9 @@ public class UserProfileFragment extends Fragment {
         // set to null if not present.
         spEmail = sharedPreferences.getString(EMAIL_KEY, null);
         spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
+    }
 
+    public void initDatabase(){
         myDatabaseHelper = new MyDatabaseHelper(getContext());
         userData = myDatabaseHelper.getUserData(spEmail, spPassword);
     }

@@ -45,6 +45,11 @@ public class HistoryFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
+        initSharedPref();
+        setRecyclerView(view);
+    }
+
+    public void initSharedPref(){
         // getting the data which is stored in shared preferences.
         sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         // in shared prefs inside het string method
@@ -56,7 +61,9 @@ public class HistoryFragment extends Fragment {
 
         MyDatabaseHelper myDatabaseHelper = new MyDatabaseHelper(getContext());
         workoutRecordModelArrayList = myDatabaseHelper.getWorkoutRecord(null, spEmail);
+    }
 
+    public void setRecyclerView(View view){
         rv = (RecyclerView) view.findViewById(R.id.rv_workoutRecord);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
         rv.setLayoutManager(layoutManager);
@@ -64,6 +71,6 @@ public class HistoryFragment extends Fragment {
         workoutRecordAdapter = new WorkoutRecordAdapter(getContext(), workoutRecordModelArrayList);
         rv.setAdapter(workoutRecordAdapter);
         rv.addItemDecoration(new DividerItemDecoration(rv.getContext(), DividerItemDecoration.VERTICAL));
-
     }
+
 }
