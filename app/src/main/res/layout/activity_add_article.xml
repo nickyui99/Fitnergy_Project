@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:gravity="center_vertical"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write An Article"
+        android:layout_marginHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
 
     <androidx.cardview.widget.CardView
 
