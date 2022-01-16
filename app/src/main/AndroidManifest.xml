@@ -57,6 +57,12 @@
             android:name=".education.ArticlePageActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".social.ChatLists"
+            android:exported="true" />
+
+        <activity android:name=".social.Chatin"
+            android:exported="true" />
 
 
     </application>
