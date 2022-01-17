@@ -27,6 +27,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.rtn.fitnergy.R;
 import com.rtn.fitnergy.database.MyDatabaseHelper;
+import com.rtn.fitnergy.education.FavouritePageActivity;
 import com.rtn.fitnergy.profile.Adapters.WorkoutRecordAdapter;
 import com.rtn.fitnergy.profile.SettingsActivity;
 import com.rtn.fitnergy.profile.model.WorkoutRecordModel;
@@ -36,6 +37,7 @@ import java.util.ArrayList;
 public class SocialFragment extends Fragment {
 
     private CheckBox like;
+    FloatingActionButton chatbtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,16 @@ public class SocialFragment extends Fragment {
 
         super.onViewCreated(view, savedInstanceState);
         like = (CheckBox) view.findViewById(R.id.likebtn);
+        chatbtn = (FloatingActionButton) view.findViewById(R.id.chats);
+
+        chatbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent c = new Intent(view.getContext(), ChatLists.class);
+                c.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(c);
+            }
+        });
 
         ArrayList<Newsfeedrepeat> arrayList= new ArrayList<>();
         arrayList.add(new Newsfeedrepeat(R.drawable.pic1,R.drawable.post,"Narresh Naidu", "I'm the Strongest..."));
