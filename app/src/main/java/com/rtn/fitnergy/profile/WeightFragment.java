@@ -98,19 +98,23 @@ public class WeightFragment extends Fragment{
         float weightChange = weightModel.getWeightChange();
         float height = userModel.getHeight();
         float bmi = (currentWeight/height/height) *10000; //calculate bmi
+        String str_weightChange = "";
 
         txtViewBmiCounter.setText(String.format( "%.1f",bmi));
         txtViewBmiCategory.setText(checkBmiCategory(bmi));
         if (weightChange < 0){
             //if the weight change is negative then set text color as green
             txtViewChangeCounter.setTextColor(ContextCompat.getColor(getContext(), R.color.success));
+            str_weightChange = String.valueOf(weightChange);
         }else if (weightChange > 0 ){
             //if the weight change is positive then set text color as red
             txtViewChangeCounter.setTextColor(ContextCompat.getColor(getContext(), R.color.alert));
+            str_weightChange = "+" + String.valueOf(weightChange);
+
         }
         txtViewPreviousCounter.setText(String.valueOf(previousWeight));
         txtViewCurrentCounter.setText(String.valueOf(currentWeight));
-        txtViewChangeCounter.setText(String.valueOf(weightChange));
+        txtViewChangeCounter.setText(str_weightChange);
 
         btnUpdateTodayWeight.setOnClickListener(new View.OnClickListener() {
             @Override

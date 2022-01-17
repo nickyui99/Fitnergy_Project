@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="alert">#FF9800</color>
     <color name="success">#009688</color>
-    <color name="safe">#ACFFAF</color>
+    <color name="safe">#C5E1A5</color>
     <color name="harmful">#F3F3A5</color>
     <color name="dangerous">#FFDDDD</color>
 </resources>
