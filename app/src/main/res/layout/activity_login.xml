@@ -10,7 +10,7 @@
         android:id="@+id/textViewAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/lobster_regular"
         android:text="Fitnergy"
         android:textColor="@color/black"
@@ -35,19 +35,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/btn_googleSignin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -60,13 +47,13 @@
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAppName">
+        app:layout_constraintTop_toBottomOf="@+id/textViewSlogan">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextRegisterEmail"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -116,9 +103,19 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="15dp"
+        android:layout_marginBottom="16dp"
         android:text="OR"
-        app:layout_constraintBottom_toTopOf="@+id/divider5"
-        app:layout_constraintEnd_toEndOf="@+id/divider5"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/divider5" />
+        app:layout_constraintBottom_toTopOf="@+id/btn_googleSignin"
+        app:layout_constraintEnd_toEndOf="@+id/btn_googleSignin"
+        app:layout_constraintStart_toStartOf="@+id/btn_googleSignin" />
+
+    <TextView
+        android:id="@+id/textViewSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empowering your fitness journey"
+        app:layout_constraintEnd_toEndOf="@+id/textViewAppName"
+        app:layout_constraintStart_toStartOf="@+id/textViewAppName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
