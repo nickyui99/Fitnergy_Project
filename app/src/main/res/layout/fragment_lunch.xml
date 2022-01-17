@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".meal.lunchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:text="Lunch"
+            android:textColor="#1E1B1B"
+            android:textSize="34sp" />
+
+    <Button
+            android:id="@+id/button4"
+
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="660dp"
+            android:text="Back" />
+
+    <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="272dp"
+            android:layout_height="263dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"
+
+            android:src="@drawable/lunch1" />
+
+
+
+    <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="272dp"
+            android:layout_height="263dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="280dp"
+            android:src="@drawable/lunch22" />
+
+    <TextView
+            android:id="@+id/textView5"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="510dp"
+            android:lines="2"
+            android:maxLines="2"
+
+            android:text="Savory Mediterranean Yogurt Parfait"
+            android:textSize="22sp" />
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="297dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="260dp"
+            android:text="Turkey Parmesan Burgers"
+            android:textSize="22sp" />
+
+
+</FrameLayout>

@@ -7,8 +7,78 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+            android:id="@+id/textView2"
+            android:layout_width="425dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:text="Meals"
+            android:textColor="#1E1B1B"
+            android:textSize="34sp" />
+
+    <Button
+            android:id="@+id/breakfastBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="310dp"
+            android:text="Start" />
+
+    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="320dp"
+            android:text="Breakfast"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    <Button
+            android:id="@+id/lunchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400dp"
+            android:layout_marginLeft="250dp"
+            android:text="Start" />
+
+    <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="410dp"
+            android:text="Lunch"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+    <Button
+            android:id="@+id/dinnerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="490dp"
+            android:layout_marginLeft="250dp"
+            android:text="Start" />
+
+    <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="500dp"
+            android:text="Dinner"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="290dp"
+            android:layout_height="270dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/meal" />
 
 </FrameLayout>

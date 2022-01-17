@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".meal.break2Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="425dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200dp"
+                android:text="Protein Pancake"
+                android:textColor="#1E1B1B"
+                android:textSize="24sp" />
+
+
+        <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="226dp"
+                android:layout_height="239dp"
+                android:layout_marginLeft="67dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/breakfast2" />
+
+        <TextView
+                android:id="@+id/textView6"
+                android:layout_width="297dp"
+                android:layout_height="39dp"
+
+                android:layout_marginTop="205dp"
+                android:text="Ingredient"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:lineSpacingMultiplier="0.8"
+                android:padding="10dp"
+                android:lineSpacingExtra="5dp"
+                android:id="@+id/textView8"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:lines="8"
+                android:maxLines="8"
+                android:text="@string/ingredient2"
+                android:textSize="18sp" />
+
+        <TextView
+                android:layout_width="297dp"
+                android:layout_height="39dp"
+
+                android:layout_marginTop="420dp"
+                android:text="method"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="337dp"
+                android:layout_marginTop="440dp"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:lineSpacingExtra="5dp"
+                android:lineSpacingMultiplier="0.9"
+                android:maxLines="100"
+                android:padding="5dp"
+                android:text="@string/method2"
+                android:textSize="17sp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+    </FrameLayout>
+</ScrollView>

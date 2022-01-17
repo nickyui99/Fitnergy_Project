@@ -18,4 +18,172 @@
         <item>Albums</item>
         <item>Camera</item>
     </string-array>
+
+
+    <string name="ingredient1">
+        <br>- Oats\n</br>
+        <br>- Milk (Semi-skimmed, almond or soya)\n</br>
+        <br>- Fruits (bananas,dates and blueberries)\n</br>
+        <br>- Toppings (honey and peanut butter are our faves)\n</br>
+    </string>
+    <string name="method1">
+        1. Grab a small tupperware box.\n
+        <br>2.Spoon 4-5 tablespoons of oats.\n</br>
+        <br>3. Add a half-mug of milk and stir into the mix.\n</br>
+        <br>4. Chop fruit and add to the mixture.\n</br>
+        <br>5. A dollop of honey or peanut butter, or a handful of nuts.\n</br>
+        <br>6. Put the lid on and leave in the fridge overnight. 8 hours, ideally.\n</br>
+    </string>
+
+
+    <string name="ingredient2">
+        <br>- 1 scoop of whey protein\n</br>
+        <br>- Coconut oil\n</br>
+        <br>- Three egg whites\n</br>
+        <br>- 4-5tbsp of oats\n</br>
+        <br>- 1 banana\n</br>
+        <br>- Generous handful of blueberries\n</br>
+        <br>- 2tbsp baking powder\n</br>
+        <br>- Optional: medium-sized sweet potato\n</br>
+    </string>
+
+    <string name="method2">
+        1.Drop the oats into a blender and whizz until it has a flour-like texture.\n
+        <br>2.Add the eggs, banana, protein and baking powder and blend until it’s all smooth.\n</br>
+        <br>3.Add the blueberries, raspberries or strawberries.\n</br>
+        <br>4.Grab a non-stick frying pan and drop some coconut oil into the pan.\n</br>
+        <br>5.Scoop an inch of the mix and drop it into the pan, cooking for one minute on each side.\n</br>
+        <br>6.Refrigerate overnight and warm in the morning, with a dollop of peanut butter and/or honey.\n\n</br>
+    </string>
+
+    <string name="ingredient3">
+        <br>- 1 pound lean ground turkey\n</br>
+        <br>- 6 tablespoons marinara sauce, divided\n</br>
+        <br>- 1 clove garlic, minced\n</br>
+        <br>- 2 tablespoons grated Parmesan cheese\n</br>
+        <br>- ½ teaspoon dried oregano\n</br>
+        <br>- ¼ teaspoon dried thyme\n</br>
+        <br>- ¼ teaspoon kosher salt\n</br>
+        <br>- ⅛ teaspoon black pepper\n</br>
+        <br>- ¼ teaspoon red pepper flakes\n</br>
+        <br>- 2 teaspoons olive oil\n</br>
+        <br>- ½ cup shredded part-skim mozzarella cheese\n</br>
+        <br>- 4 whole-grain hamburger buns\n</br>
+        <br>- Fresh basil leaves\n</br>
+    </string>
+
+    <string name="method3">
+        <br>1. Mix the turkey,2 tablespoons marinara sauce, garlic, cheese, oregano, thyme, salt, pepper, and red pepper
+            flakes together in a large bowl.\n
+        </br>
+        <br>2. Form into four patties.\n</br>
+        <br>3. Heat the oil in a large nonstick skillet over medium high heat and add the patties.\n</br>
+        <br>4. Cook for 4 to 5 minutes, then flip and cook for another 4 to 5 minutes until cooked to 165 degrees
+            Fahrenheit.\n
+        </br>
+        <br>5. During the last minute of cooking, add 2 tablespoons shredded cheese on top of each burger and cover the
+            skillet to melt the cheese.\n
+        </br>
+        <br>6. To serve, place the patties on toasted hamburger buns. Top each patty with 1 tablespoon marinara sauce
+            and a few basil leaves. \n
+        </br>
+        <br>7. Add the bun top and serve!</br>
+    </string>
+
+    <string name="ingredient4">
+        <br>- 2 cups cooked quinoa\n</br>
+        <br>- 1 cup finely diced cucumber\n</br>
+        <br>- ½ cup loosely packed sun-dried tomatoes, chopped*\n</br>
+        <br>- 1 tablespoon red wine vinegar\n</br>
+        <br>- 2 tablespoons minced, fresh parsley\n</br>
+        <br>- Pinch of salt\n</br>
+        <br>- 3 cups plain low fat Greek yogurt\n</br>
+        <br>- 2 cloves of garlic, minced\n</br>
+        <br>- 1 cup sliced California black ripe olives\n</br>
+        <br>- ¼ cup chopped walnuts\n</br>
+    </string>
+
+    <string name="method4">
+        <br>1. Combine quinoa, cucumber, sun-dried tomatoes, red wine vinegar, parsley, and salt. Mix well and set
+            aside.\n
+        </br>
+        <br>2. In a separate bowl, mix yogurt with minced garlic.\n</br>
+        <br>3. In a tall round goblet or parfait cup, layer about ⅓ cup yogurt, then 2 tablespoons of sliced black
+            olives and then ½ cup quinoa mixture.\n</br>
+        <br>4. Repeat with another ⅓ cup of yogurt. Then top with 2 more tablespoons
+            of black olives.\n</br>
+        <br>5. Lastly, sprinkle top with a tablespoon of chopped walnuts.\n</br>
+        <br>6. Refrigerate if not eating right away.\n</br>
+    </string>
+
+    <string name="ingredient5">
+        <br>- 160g cooked pasta\n</br>
+        <br>- 3 breasts cooked chicken\n</br>
+        <br>- 2 stalks celery\n</br>
+        <br>- Handful cherry tomatoes\n</br>
+        <br>- 1 yellow pepper\n</br>
+        <br>- 2 tbsp. reduced-fat ranch dressing\n</br>
+        <br>- Large handful mixed leaves\n</br>
+        <br>- For the buffalo sauce:n</br>
+        <br>- 175ml peri-peri sauce\n</br>
+        <br>- ½ tsp. garlic powder\n</br>
+        <br>- 4 tbsp. reduced-fat butter or margarine\n</br>
+        <br>- Pinch salt\n</br>
+    </string>
+
+    <string name="method5">
+        <br>1.Place a saucepan over a medium heat\n</br>
+        <br>2.add the peri-peri sauce and garlic powder cook for 2 minutes\n</br>
+        <br>3.add butter and salt and cook for a further 5 minutes, stirring occasionally.\n</br>
+        <br>4.Remove from the heat and allow to cool for a few minutes.\n</br>
+        <br>5.Chop celery, tomatoes and pepper into bite-size pieces.\n</br>
+        <br>6.shred the chicken using two forks. Place into a large mixing bowl with the cooked pasta.\n</br>
+        <br>7.Pour over buffalo sauce and toss it through the pasta salad.\n</br>
+        <br>8.Divide amongst 3 meal-prep containers and drizzle a little ranch dressing over each\n</br>
+        <br>9.Serve with a handful of mixed leaves or your favourite side salad.\n</br>
+        <br>10.Refrigerate for up to 3 days and enjoy hot or cold.\n</br>
+    </string>
+
+    <string name="ingredient6">
+        <br>- 2 tsp. fresh thyme\n</br>
+        <br>- 2 tsp. mixed herbs\n</br>
+        <br>- Salt and pepper to taste\n</br>
+        <br>- 6 boneless, skinless chicken thighs\n</br>
+        <br>- 1 tbsp. oil\n</br>
+        <br>- 1 onion (chopped)\n</br>
+        <br>- 2 garlic cloves (chopped)\n</br>
+        <br>- Juice of 1 lemon\n</br>
+        <br>- 100ml chicken stock\n</br>
+        <br>- 200ml crème fraiche\n</br>
+        <br>- Lemon slices\n</br>
+        <br>- Fresh thyme\n</br>
+        <br>- Serving suggestions:\n</br>
+
+        <br>- Quinoa (around 50g per serving)\n</br>
+        <br>- Tenderstem broccoli\n</br>
+    </string>
+
+
+    <string name="method6">
+        <br>1.Prepare the seasoning by mixing the fresh thyme, mixed herbs, salt, and pepper in a little bowl.\n</br>
+        <br>2.Sprinkle generously over your chicken thighs, making sure to coat evenly.\n</br>
+        <br>3.Keep any remaining seasoning to the side to use later.\n</br>
+        <br>4.Add the oil to a large pan over a medium heat. Once hot, add your chicken thighs and cook for several
+            minutes on each side.\n
+        </br>
+        <br>5.They should be crispy and browned on the outside, and completely cooked through on the inside (with no
+            pink bits).\n
+        </br>
+        <br>6.Remove the chicken from the pan and set aside.\n</br>
+        <br>7.In the same pan as you cooked the chicken, add the onion and garlic and cook for a few minutes until
+            softened.\n
+        </br>
+        <br>8.Then add the lemon juice, chicken stock, and any of the remaining seasoning mix, stir well to combine, and
+            allow to bubble for a few minutes.\n
+        </br>
+        <br>9.Add the crème fraiche, stir through, and cook for another 2-3 minutes to thicken.\n</br>
+        <br>10.Then add the chicken thighs back into the pan and allow to heat up for a few minutes.\n</br>
+        <br>11.Remove from the heat and garnish with fresh lemon slices and a sprinkle of thyme.\n</br>
+        <br>12.Serve up with quinoa and enjoy immediately.\n</br>
+    </string>
 </resources>
