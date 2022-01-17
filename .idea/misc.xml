@@ -35,6 +35,12 @@
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/menu/mymenu.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/activity_register.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_user_weight.xml" value="0.25" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12037037037037036" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/raw/mipmap-anydpi-v26/ic_fitnergy.xml" value="0.12037037037037036" />
+        <entry key="..\:/Users/nicho/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/raw/mipmap-anydpi-v26/ic_fitnergy_round.xml" value="0.12037037037037036" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/drawable/bookmark.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/drawable/chats.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/drawable/chattt.xml" value="0.26614583333333336" />
@@ -61,16 +67,13 @@
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/course_list.xml" value="0.25" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/examplelistchat.xml" value="0.4" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_edu.xml" value="0.2721342031686859" />
-        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_history.xml" value="0.11666666666666667" />
-        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_meal.xml" value="0.11666666666666667" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
-        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_social.xml" value="0.33383010432190763" />
+        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_social.xml" value="0.264" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_user_profile.xml" value="0.25" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_user_weight.xml" value="0.25" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/fragment_workout.xml" value="0.25" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/my_row.xml" value="0.12708333333333333" />
-        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/newsfeedlayout.xml" value="0.3905038759689923" />
-        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/socprof.xml" value="0.2" />
+        <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/newsfeedlayout.xml" value="0.264" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/menu/bottom_menu.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/menu/mymenu.xml" value="0.12708333333333333" />
       </map>
@@ -81,5 +84,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>

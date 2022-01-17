@@ -336,6 +336,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         cv.put(USER_COLUMN_BIRTHDATE, dateToString(userData.getBirthdate()));
         cv.put(USER_COLUMN_GENDER, userData.getGender());
         cv.put(USER_COLUMN_PROFILEIMAGE, convertBitmaptoByteArray(userData.getProfileImage()));
+        cv.put(USER_COLUMN_HEIGHT, userData.getHeight());
         cv.put(USER_COLUMN_PROFILEVISIBILITYSETTING, userData.isProfileVisibilitySetting());
         cv.put(USER_COLUMN_SOCIALCIRCLESETTING, userData.isSocialCircleSetting());
         cv.put(USER_COLUMN_PRIVATEMODESETTING, userData.isPrivateModeSetting());

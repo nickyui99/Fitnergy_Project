@@ -194,13 +194,7 @@ public class ProfileSettingActivity extends AppCompatActivity implements View.On
                 String userName = editTextUpdateName.getText().toString();
                 String userBirthdate = editTextUpdateBirthdate.getText().toString();
                 String userGender = dropdownUpdateGender.getText().toString();
-                int userheight = 0;
-                try {
-                    userheight = Integer.parseInt(editTextHeight.getText().toString());
-                }
-                catch (NumberFormatException e){
-                    Log.e(TAG, e.toString());
-                }
+                int userheight = Integer.parseInt(editTextHeight.getText().toString());
 
                 if(userName.equals("") || userBirthdate.equals("") || userGender.equals("") || userheight == 0){
                     //To check the input details validation

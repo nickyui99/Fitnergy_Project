@@ -24,6 +24,7 @@ import com.rtn.fitnergy.profile.model.UserModel;
 import com.shobhitpuri.custombuttons.GoogleSignInButton;
 
 import java.util.ArrayList;
+import java.util.TooManyListenersException;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -37,6 +38,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public static final String SHARED_PREFS = "user_session";   // creating constant keys for shared preferences.
     public static final String EMAIL_KEY = "email_key";     // key for storing email.
     public static final String PASSWORD_KEY = "password_key";   // key for storing password.
+    public static final int SIGN_IN_SUCCESS = 1;
+    public static final int SIGN_IN_FAIL = 0;
     String spEmail, spPassword;
 
     @Override
@@ -167,11 +170,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     //normal sign in
     public void signIn(){
         ArrayList<UserModel> userModelArrayList = myDatabaseHelper.getAllUser();
+        int signInStatus = SIGN_IN_FAIL;
         for (UserModel userModel: userModelArrayList){
             if (editTextEmail.getText().toString().equals(userModel.getUserEmail()) && editTextPassword.getText().toString().equals(userModel.getUserPassword())) {
                 onSignInSuccess();
+                signInStatus = SIGN_IN_SUCCESS;
             }
         }
+        if(signInStatus == SIGN_IN_FAIL){
+            Toast.makeText(this, "Sign in fail", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     /**
