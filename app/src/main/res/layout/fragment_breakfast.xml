@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".meal.breakfastFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+            android:id="@+id/textView2"
+            android:layout_width="450dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:text="Breakfast"
+            android:textColor="#1E1B1B"
+            android:textSize="34sp" />
+
+    <Button
+            android:id="@+id/button4"
+
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="660dp"
+            android:text="Back" />
+
+    <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="241dp"
+            android:layout_height="227dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="35dp"
+
+            android:src="@drawable/breakfast1" />
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="387dp"
+            android:layout_height="63dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginLeft="90dp"
+            android:orientation="vertical"
+            android:text="  Overnight Oats"
+            android:textSize="24sp" />
+
+    <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="241dp"
+            android:layout_height="227dp"
+            android:layout_marginLeft="63dp"
+            android:layout_marginTop="280dp"
+            android:src="@drawable/breakfast2" />
+
+    <TextView
+            android:id="@+id/textView5"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="490dp"
+            android:lines="2"
+            android:maxLines="2"
+            android:layout_marginLeft="90dp"
+            android:text="Protein Pancake"
+            android:textSize="24sp" />
+
+</FrameLayout>

@@ -76,10 +76,20 @@
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/layout/newsfeedlayout.xml" value="0.264" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/menu/bottom_menu.xml" value="0.12708333333333333" />
         <entry key="..\:/Users/sxrvx/AndroidStudioProjects/Fitnergy_Project/app/src/main/res/menu/mymenu.xml" value="0.12708333333333333" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_break1.xml" value="0.1" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_break2.xml" value="0.24010416666666667" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_breakfast.xml" value="0.24010416666666667" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_dinner.xml" value="0.2912192040429564" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_dinner1.xml" value="0.4" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_dinner2.xml" value="0.24010416666666667" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_lunch.xml" value="0.24010416666666667" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_lunch1.xml" value="0.264" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_lunch2.xml" value="0.22604166666666667" />
+        <entry key="..\:/Yi Wee/Android Studio/Fitnergy_Project/app/src/main/res/layout/fragment_meal.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
