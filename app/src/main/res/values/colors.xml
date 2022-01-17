@@ -11,5 +11,5 @@
     <color name="success">#009688</color>
     <color name="safe">#ACFFAF</color>
     <color name="harmful">#F3F3A5</color>
-    <color name="dangerous">#FF7F7F</color>
+    <color name="dangerous">#FFDDDD</color>
 </resources>

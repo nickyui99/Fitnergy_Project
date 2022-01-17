@@ -221,7 +221,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
             else{
                 //if the registration details valid
-                addUserModel = new UserModel(-1, name, password, email, ((BitmapDrawable) getApplicationContext().getDrawable(R.drawable.profile_user)).getBitmap(), gender, height, birthdate, true, true, true);
+                addUserModel = new UserModel(-1, name, password, email, ((BitmapDrawable) getApplicationContext().getDrawable(R.drawable.blank_profile_pic)).getBitmap(), gender, height, birthdate, true, true, true);
                 addUser(addUserModel);
                 onRegistrationSuccess();
                 Toast.makeText(this, "Registration success", Toast.LENGTH_SHORT).show();
