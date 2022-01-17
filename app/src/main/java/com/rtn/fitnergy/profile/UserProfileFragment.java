@@ -77,12 +77,12 @@ public class UserProfileFragment extends Fragment {
 
     public void initViews(){
         txtViewUsername = (TextView) getView().findViewById(R.id.UP_txtViewName);
-        txtViewGender = (TextView) getView().findViewById(R.id.UP_txtViewGender);
-        txtViewAge = (TextView) getView().findViewById(R.id.UP_txtViewAge);
-        txtViewWorkoutTimeCounter = (TextView) getView().findViewById(R.id.UP_txtViewWorkoutTimeCounter);
-        txtViewCalorieCounter = (TextView) getView().findViewById(R.id.UP_txtViewCalorieCounter);
-        imgViewProfileImage = (ImageView) getView().findViewById(R.id.UP_imgViewProfileImage);
-        imageButtonSettings = (ImageButton) getView().findViewById(R.id.UP_imgBtnSettings);
+        txtViewGender = getView().findViewById(R.id.UP_txtViewGender);
+        txtViewAge = getView().findViewById(R.id.UP_txtViewAge);
+        txtViewWorkoutTimeCounter = getView().findViewById(R.id.UP_txtViewWorkoutTimeCounter);
+        txtViewCalorieCounter = getView().findViewById(R.id.UP_txtViewCalorieCounter);
+        imgViewProfileImage = getView().findViewById(R.id.UP_imgViewProfileImage);
+        imageButtonSettings = getView().findViewById(R.id.UP_imgBtnSettings);
     }
 
     public void setViews(){
@@ -97,7 +97,7 @@ public class UserProfileFragment extends Fragment {
         if (userData != null){
             txtViewUsername.setText(userData.getUserName());
             txtViewGender.setText("Gender: " + userData.getGender());
-            txtViewAge.setText("Age: " + String.valueOf(calcAge(userData.getBirthdate())));
+            txtViewAge.setText("Age: " + calcAge(userData.getBirthdate()));
             imgViewProfileImage.setImageBitmap(userData.getProfileImage());
             ArrayList<WorkoutRecordModel> workoutRecordModelArrayList = myDatabaseHelper.getWorkoutRecord(null, spEmail);
             float totalWorkoutDuration = 0;
@@ -120,6 +120,9 @@ public class UserProfileFragment extends Fragment {
                 //Update user data
                 initDatabase();
                 setViews();
+                WeightFragment weightFragment = (WeightFragment) getActivity().getSupportFragmentManager().findFragmentById(R.id.weightFragment);
+                weightFragment.initDatabase();
+                weightFragment.setViews();
             }
             if (resultCode == RESULT_CANCELED) {
                 //Do nothing?
@@ -136,7 +139,7 @@ public class UserProfileFragment extends Fragment {
 
         Calendar dobCalendar = Calendar.getInstance();
         dobCalendar.setTime(birthdate);
-        int ageInteger = 0;
+        int ageInteger;
         Calendar today = Calendar.getInstance();
         ageInteger = today.get(Calendar.YEAR) - dobCalendar.get(Calendar.YEAR);
 

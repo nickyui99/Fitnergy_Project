@@ -21,6 +21,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.rtn.fitnergy.R;
 import com.rtn.fitnergy.database.MyDatabaseHelper;
@@ -91,7 +92,7 @@ public class WeightFragment extends Fragment{
 
     }
 
-    private void setViews() {
+    public void setViews() {
         float previousWeight = weightModel.getPreviousWeight();
         float currentWeight = weightModel.getCurrentWeight();
         float weightChange = weightModel.getWeightChange();
