@@ -19,7 +19,7 @@ public class ChatLists extends AppCompatActivity {
         ArrayList<ChatRepeat> arrayList= new ArrayList<>();
         arrayList.add(new ChatRepeat(R.drawable.post,"Tan Yi Wee", "Hello"));
         arrayList.add(new ChatRepeat(R.drawable.pic4, "Ronald Lim", "Hello"));
-        arrayList.add(new ChatRepeat(R.drawable.ronnie,"Yi Wee", "Hello"));
+        arrayList.add(new ChatRepeat(R.drawable.ronnie,"Nicholas", "Hello"));
         arrayList.add(new ChatRepeat(R.drawable.pic3,"Chee Kin", "Hello"));
 
 

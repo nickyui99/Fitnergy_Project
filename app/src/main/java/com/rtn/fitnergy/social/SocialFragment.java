@@ -36,8 +36,8 @@ import java.util.ArrayList;
 
 public class SocialFragment extends Fragment {
 
-    private CheckBox like;
     FloatingActionButton chatbtn;
+    FloatingActionButton pro;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,7 +53,6 @@ public class SocialFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
 
         super.onViewCreated(view, savedInstanceState);
-        like = (CheckBox) view.findViewById(R.id.likebtn);
         chatbtn = (FloatingActionButton) view.findViewById(R.id.chats);
 
         chatbtn.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +61,17 @@ public class SocialFragment extends Fragment {
                 Intent c = new Intent(view.getContext(), ChatLists.class);
                 c.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(c);
+            }
+        });
+
+        pro = (FloatingActionButton) view.findViewById(R.id.prof);
+
+        pro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent d = new Intent(view.getContext(), SocProf.class);
+                d.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(d);
             }
         });
 

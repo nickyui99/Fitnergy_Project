@@ -12,7 +12,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:id="@+id/card_view"
-        app:cardBackgroundColor="#f2f2f2"
+        app:cardBackgroundColor="#F9F9F9"
         app:cardCornerRadius="2dp"
         app:cardElevation="3dp"
         app:cardMaxElevation="12dp"
