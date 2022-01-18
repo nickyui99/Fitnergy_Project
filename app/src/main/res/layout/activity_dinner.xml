@@ -3,7 +3,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".meal.dinnerFragment">
+             tools:context=".meal.dinnerActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -12,8 +12,9 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="200dp"
             android:text="Dinner"
+            android:layout_marginLeft="5dp"
             android:textColor="#1E1B1B"
-            android:textSize="34sp" />
+            android:textSize="34sp"/>
 
     <Button
             android:id="@+id/button4"
@@ -22,16 +23,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="660dp"
-            android:text="Back" />
+            android:text="Back"/>
 
     <ImageView
             android:id="@+id/imageView7"
             android:layout_width="272dp"
             android:layout_height="263dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="35dp"
 
-            android:src="@drawable/dinner1" />
+            android:src="@drawable/dinner1"/>
 
     <TextView
             android:id="@+id/textView9"
@@ -41,15 +42,15 @@
             android:layout_marginLeft="30dp"
             android:orientation="vertical"
             android:text="  Buffalo Chicken Pasta Salad"
-            android:textSize="22sp" />
+            android:textSize="22sp"/>
 
     <ImageView
             android:id="@+id/imageView8"
             android:layout_width="272dp"
             android:layout_height="263dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="280dp"
-            android:src="@drawable/dinner2" />
+            android:src="@drawable/dinner2"/>
 
     <TextView
             android:id="@+id/textView"
@@ -57,15 +58,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="490dp"
             android:lines="2"
+            android:layout_marginLeft="10dp"
             android:maxLines="2"
             android:text="Creamy Lemon with Thyme Chicken"
-            android:textSize="22sp" />
+            android:textSize="22sp"/>
 
-    <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="535dp"
-            android:layout_marginLeft="130dp"
-            android:text="Back" />
+
 </FrameLayout>

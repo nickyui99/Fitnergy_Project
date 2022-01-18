@@ -18,6 +18,30 @@
             android:supportsRtl="true"
             android:theme="@style/Theme.Fitnergy">
         <activity
+                android:name=".meal.dinner2Activity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.dinner1Activity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.lunch2Activity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.lunch1Activity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.lunchActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.dinnerActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.breakfastActivity"
+                android:exported="true"/>
+        <activity
+                android:name=".meal.break2Activity"
+                android:exported="true"/>
+        <activity
                 android:name=".meal.break1Activity"
                 android:exported="true"/>
         <activity

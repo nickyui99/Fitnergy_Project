@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".meal.lunch2Fragment">
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".meal.lunch2Activity">
 
     <!-- TODO: Update blank fragment layout -->
     <FrameLayout
@@ -16,10 +16,10 @@
                 android:layout_width="425dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200dp"
-
+                android:layout_marginLeft="5dp"
                 android:text="Savory Mediterranean Yogurt Parfait"
                 android:textColor="#1E1B1B"
-                android:textSize="22sp" />
+                android:textSize="22sp"/>
 
         <ImageView
                 android:id="@+id/imageView3"
@@ -27,18 +27,18 @@
                 android:layout_height="239dp"
                 android:layout_marginLeft="68dp"
                 android:paddingLeft="10dp"
-                android:src="@drawable/lunch22" />
+                android:src="@drawable/lunch22"/>
 
 
         <TextView
                 android:id="@+id/textView6"
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="200dp"
                 android:text="Ingredient"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         <TextView
                 android:id="@+id/textView8"
@@ -52,16 +52,16 @@
                 android:maxLines="14"
                 android:padding="10dp"
                 android:text="@string/ingredient4"
-                android:textSize="18sp" />
+                android:textSize="18sp"/>
 
         <TextView
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="490dp"
                 android:text="method"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
 
         <TextView
@@ -75,20 +75,14 @@
                 android:maxLines="25"
                 android:padding="10dp"
                 android:text="@string/method4"
-                android:textSize="17sp" />
+                android:textSize="17sp"/>
 
-        <Button
-                android:id="@+id/backlunch2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="880dp"
-                android:layout_marginLeft="130dp"
-                android:text="Back" />
+
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical"/>
 
     </FrameLayout>
 </ScrollView>

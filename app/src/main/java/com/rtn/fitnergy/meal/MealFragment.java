@@ -1,5 +1,6 @@
 package com.rtn.fitnergy.meal;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -69,8 +70,8 @@ public class MealFragment extends Fragment {
         BREAKFAST.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                breakfastFragment bffragCong = new breakfastFragment();
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, bffragCong).commit();
+                Intent Intent = new Intent(getActivity(), breakfastActivity.class);
+                startActivity(Intent);
             }
         });
 
@@ -78,18 +79,16 @@ public class MealFragment extends Fragment {
         LUNCH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lunchFragment lunfragCong = new lunchFragment();
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, lunfragCong).commit();
-            }
+                Intent Intent = new Intent(getActivity(), lunchActivity.class);
+                startActivity(Intent);       }
         });
 
         Button DINNER = (Button) view.findViewById(R.id.dinnerBtn);
         DINNER.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dinnerFragment fragCong = new dinnerFragment();
-                getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragCong).commit();
-            }
+                Intent Intent = new Intent(getActivity(), dinnerActivity.class);
+                startActivity(Intent);      }
         });
         return view;
     }

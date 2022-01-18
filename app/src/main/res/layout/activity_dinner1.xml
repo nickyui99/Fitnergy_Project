@@ -3,7 +3,7 @@
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".meal.dinner2Fragment">
+            tools:context=".meal.dinner1Activity">
 
     <!-- TODO: Update blank fragment layout -->
     <FrameLayout
@@ -16,35 +16,35 @@
                 android:layout_width="425dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200dp"
-
-                android:text="Creamy Lemon with Thyme Chicken"
+                android:layout_marginLeft="5dp"
+                android:text="Buffalo Chicken Pasta Salad"
                 android:textColor="#1E1B1B"
-                android:textSize="23sp" />
+                android:textSize="24sp"/>
 
         <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageView7"
                 android:layout_width="226dp"
                 android:layout_height="239dp"
                 android:layout_marginLeft="65dp"
                 android:layout_marginTop="10dp"
                 android:paddingLeft="10dp"
-                android:src="@drawable/dinner2" />
+                android:src="@drawable/dinner1"/>
 
 
         <TextView
                 android:id="@+id/textView6"
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="220dp"
                 android:text="Ingredient"
                 android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
         <TextView
                 android:id="@+id/textView8"
                 android:layout_width="fill_parent"
-                android:layout_height="550dp"
+                android:layout_height="287dp"
                 android:layout_marginTop="240dp"
                 android:layout_weight="1"
                 android:width="0dp"
@@ -53,46 +53,39 @@
                 android:lines="70"
                 android:maxLines="70"
                 android:padding="10dp"
-                android:text="@string/ingredient6"
-                android:textSize="18sp" />
+                android:text="@string/ingredient5"
+                android:textSize="18sp"/>
 
         <TextView
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
-                android:layout_marginTop="650dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="530dp"
                 android:text="method"
                 android:textSize="22sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
 
         <TextView
                 android:layout_width="fill_parent"
+                android:layout_height="574dp"
+                android:layout_marginTop="550dp"
                 android:layout_weight="1"
                 android:width="0dp"
-                android:lineSpacingMultiplier="0.9"
-                android:padding="10dp"
                 android:lineSpacingExtra="5dp"
-                android:layout_height="713dp"
-                android:layout_marginTop="680dp"
+                android:lineSpacingMultiplier="0.9"
                 android:lines="100"
                 android:maxLines="100"
-                android:text="@string/method6"
+                android:padding="10dp"
+                android:text="@string/method5"
                 android:textSize="17sp"
 
         />
-        <Button
-                android:id="@+id/backdinner2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1380dp"
-                android:layout_marginLeft="130dp"
-                android:text="Back" />
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical"/>
 
     </FrameLayout>
 </ScrollView>

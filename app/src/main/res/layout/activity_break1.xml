@@ -17,7 +17,7 @@
                 android:layout_width="425dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="200dp"
-
+                android:layout_marginLeft="5dp"
                 android:text="Overnight Oat"
                 android:textColor="#1E1B1B"
                 android:textSize="24sp" />
@@ -36,7 +36,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="220dp"
                 android:text="Ingredient"
                 android:textSize="20sp"
@@ -60,7 +60,7 @@
         <TextView
                 android:layout_width="297dp"
                 android:layout_height="39dp"
-
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="400dp"
                 android:text="method"
                 android:textSize="22sp"
