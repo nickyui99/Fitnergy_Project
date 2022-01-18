@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,25 +32,30 @@ public class AddArticleActivity extends AppCompatActivity {
         Button addArticleButton = (Button) findViewById(R.id.btn_addArticle_button);
 
 
-        addArticleButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MyDatabaseHelper myDB = new MyDatabaseHelper(view.getContext());
-                myDB.addArticle(addArticleTitle.getText().toString(), addArticleDesc.getText().toString(), "https://sm.pcmag.com/t/pcmag_ap/news/t/the-best-f/the-best-fitness-apps-for-2020_ycf7.1200.jpg", "none",getUserEmail(myDB));
-            }
-        });
+            addArticleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (!addArticleTitle.getText().toString().isEmpty() && !addArticleDesc.getText().toString().isEmpty()) {
+                        MyDatabaseHelper myDB = new MyDatabaseHelper(view.getContext());
+                        myDB.addArticle(addArticleTitle.getText().toString(), addArticleDesc.getText().toString(), "https://sm.pcmag.com/t/pcmag_ap/news/t/the-best-f/the-best-fitness-apps-for-2020_ycf7.1200.jpg", "none", getUserEmail(myDB));
+                    }else {
+                        Toast.makeText(view.getContext(), "Please fill in the input fields.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
 
 
-    }
 
-    public String getUserEmail (MyDatabaseHelper db){
+
+    public String getUserEmail(MyDatabaseHelper db) {
         sharedPreferences = this.getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         spEmail = sharedPreferences.getString(EMAIL_KEY, null);
         spPassword = sharedPreferences.getString(PASSWORD_KEY, null);
 
         userData = db.getUserData(spEmail, spPassword);
         String userEmail = userData.getUserEmail();
-        Log.d("HOHOHO","getUserEmail: "+userEmail);
+        Log.d("HOHOHO", "getUserEmail: " + userEmail);
         return userEmail;
     }
 

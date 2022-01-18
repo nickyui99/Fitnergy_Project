@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,10 +38,15 @@ public class EditPageActivity extends AppCompatActivity {
             updateBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    MyDatabaseHelper db = new MyDatabaseHelper(EditPageActivity.this);
-                    db.updateArticle(id,editTitle.getText().toString(),editDesc.getText().toString());
-                    Intent favPageIntent=new Intent(EditPageActivity.this, FavouritePageActivity.class);
-                    startActivity(favPageIntent);
+                    if (!editTitle.getText().toString().isEmpty() && !editDesc.getText().toString().isEmpty()) {
+                        MyDatabaseHelper db = new MyDatabaseHelper(EditPageActivity.this);
+                        db.updateArticle(id, editTitle.getText().toString(), editDesc.getText().toString());
+                        Intent favPageIntent = new Intent(EditPageActivity.this, FavouritePageActivity.class);
+                        startActivity(favPageIntent);
+                    }
+                    else{
+                        Toast.makeText(view.getContext(), "Please fill in the input fields.", Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
 
