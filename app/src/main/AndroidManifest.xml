@@ -1,71 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.rtn.fitnergy">
+          package="com.rtn.fitnergy">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
-    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-feature
+            android:name="android.hardware.sensor.accelerometer"
+            android:required="true"/>
+    <uses-feature
+            android:name="android.hardware.sensor.gyroscope"
+            android:required="true"/>
 
     <application
-        android:icon="@mipmap/ic_fitnergy"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_fitnergy_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Fitnergy">
+            android:icon="@mipmap/ic_fitnergy"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_fitnergy_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Fitnergy">
         <activity
-            android:name=".LoginActivity"
-            android:exported="true">
+                android:name=".meal.break1Activity"
+                android:exported="true"/>
+        <activity
+                android:name=".LoginActivity"
+                android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".profile.PrivacySettingActivity"
-            android:exported="false" />
-
+                android:name=".profile.PrivacySettingActivity"
+                android:exported="false"/>
         <activity
-            android:name=".profile.ProfileSettingActivity"
-            android:exported="false" />
+                android:name=".profile.ProfileSettingActivity"
+                android:exported="false"/>
         <activity
-            android:name=".profile.SettingsActivity"
-            android:exported="false" />
-
+                android:name=".profile.SettingsActivity"
+                android:exported="false"/>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
-
+                android:name=".MainActivity"
+                android:exported="true"/>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="false" />
-
+                android:name=".RegisterActivity"
+                android:exported="false"/>
         <activity
-            android:name=".education.EditPageActivity"
-            android:exported="true" />
-
+                android:name=".education.EditPageActivity"
+                android:exported="true"/>
         <activity
-            android:name=".education.AddArticleActivity"
-            android:exported="true" />
-
+                android:name=".education.AddArticleActivity"
+                android:exported="true"/>
         <activity
-            android:name=".education.FavouritePageActivity"
-            android:exported="true" />
-
+                android:name=".education.FavouritePageActivity"
+                android:exported="true"/>
         <activity
-            android:name=".education.ArticlePageActivity"
-            android:exported="true" />
-
+                android:name=".education.ArticlePageActivity"
+                android:exported="true"/>
         <activity
-            android:name=".social.ChatLists"
-            android:exported="true" />
-
-        <activity android:name=".social.Chatin"
-            android:exported="true" />
-
-        <activity android:name=".social.SocProf"
-            android:exported="true" />
-
+                android:name=".social.ChatLists"
+                android:exported="true"/>
+        <activity
+                android:name=".social.Chatin"
+                android:exported="true"/>
+        <activity
+                android:name=".social.SocProf"
+                android:exported="true"/>
     </application>
 
 </manifest>

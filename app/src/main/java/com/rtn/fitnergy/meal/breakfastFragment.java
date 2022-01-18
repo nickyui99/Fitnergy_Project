@@ -1,5 +1,6 @@
 package com.rtn.fitnergy.meal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -63,14 +64,25 @@ public class breakfastFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_breakfast, container, false);
 
-        ImageView imageView3 = (ImageView) view.findViewById(R.id.imageView3);
+     /*   ImageView imageView3 = (ImageView) view.findViewById(R.id.imageView3);
         imageView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 break1Fragment fragCong = new break1Fragment();
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragCong).commit();
             }
+        });*/
+
+
+        ImageView imageView3 = (ImageView) view.findViewById(R.id.imageView3);
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Intent = new Intent(getActivity(), break1Activity.class);
+                startActivity(Intent);
+            }
         });
+
         ImageView imageView4 = (ImageView) view.findViewById(R.id.imageView4);
         imageView4.setOnClickListener(new View.OnClickListener() {
             @Override
