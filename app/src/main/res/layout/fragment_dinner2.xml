@@ -81,6 +81,13 @@
                 android:textSize="17sp"
 
         />
+        <Button
+                android:id="@+id/backdinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1380dp"
+                android:layout_marginLeft="130dp"
+                android:text="Back" />
 
         <LinearLayout
                 android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 package com.rtn.fitnergy.meal;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,6 +16,7 @@ import com.rtn.fitnergy.R;
  */
 public class dinnerFragment extends Fragment {
     ImageView imageView7, imageView8;
+    Button dinner;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -74,6 +76,14 @@ public class dinnerFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 dinner2Fragment fragCong = new dinner2Fragment();
+                getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragCong).commit();
+            }
+        });
+        Button dinner = (Button) view.findViewById(R.id.button3);
+        dinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MealFragment fragCong = new MealFragment();
                 getFragmentManager().beginTransaction().replace(R.id.fragmentContainerView, fragCong).commit();
             }
         });
