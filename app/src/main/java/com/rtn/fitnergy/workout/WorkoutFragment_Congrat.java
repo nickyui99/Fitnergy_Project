@@ -129,8 +129,9 @@ public class WorkoutFragment_Congrat extends Fragment {
             @Override
             public void onTransition(float tx, float ty, float tz) {
                 Log.d("Acc", "Acc: " + tx + " " + ty + " " + tz);
-                if(tz > 20.0f){
+                if(tz > 5.0f){
                     accFlag = 1;
+                    gyroFlag = 1;
                     isVictory(view, cnt);
                 }
             }
